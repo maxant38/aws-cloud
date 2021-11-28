@@ -34,6 +34,7 @@ public class S3ControllerDeleteObject {
         s3.close();
     }
 
+
     public static void deleteBucketObjects(S3Client s3, String bucketName, String objectName) {
 
         System.out.println("Starting delete object in the bucket");

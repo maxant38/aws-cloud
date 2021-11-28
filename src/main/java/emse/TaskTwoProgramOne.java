@@ -14,7 +14,7 @@ public class TaskTwoProgramOne {
         try {
 
             String nameBucket = "bucket3688480748";
-            String nameFile = "\"new_user_credentials.csv\"";
+            String nameFile = "values.csv";
             String pathFile = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud";
 
             S3ControllerCreate.main(new String[]{nameBucket});
