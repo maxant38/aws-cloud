@@ -14,8 +14,6 @@ public class EC2ControllerCreateInstance {
 
     public static void main(String[] args) {
 
-
-
         String amiId = "ami-0142f6ace1c558c7d"; // we find the Image Id in the first screen after you Launch Instance in the AWS Management Console
 
         Ec2Client ec2 = Ec2Client.builder()
