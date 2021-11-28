@@ -5,7 +5,7 @@ import software.amazon.awssdk.services.sqs.model.DeleteQueueRequest;
 import software.amazon.awssdk.services.sqs.model.GetQueueUrlRequest;
 import software.amazon.awssdk.services.sqs.model.SqsException;
 
-public class DeleteQueueSQS {
+public class SQSDeleteQueue {
 
     public static void main(String[] args) {
 

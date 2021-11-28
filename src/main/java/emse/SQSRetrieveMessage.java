@@ -7,7 +7,7 @@ import software.amazon.awssdk.services.sqs.model.SqsException;
 
 import java.util.List;
 
-public class RetrieveMessageSQS {
+public class SQSRetrieveMessage {
 
     public static List<Message> retrieveMessages(SqsClient sqsClient, String queueUrl, String queueName) {
 

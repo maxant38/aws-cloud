@@ -7,7 +7,7 @@ import software.amazon.awssdk.services.sqs.model.SqsException;
 
 import java.util.List;
 
-public class DeleteMessageSQS {
+public class SQSDeleteMessage {
 
     public static void deleteMessages(SqsClient sqsClient, String queueUrl, List<Message> messages) {
 

@@ -5,7 +5,7 @@ import software.amazon.awssdk.services.sqs.model.SendMessageBatchRequest;
 import software.amazon.awssdk.services.sqs.model.SendMessageBatchRequestEntry;
 import software.amazon.awssdk.services.sqs.model.SqsException;
 
-public class SendMessageSQS {
+public class SQSSendMessage {
 
     public static void sendMessages(SqsClient sqsClient, String queueUrl, String nameBucket, String nameFile) {
 

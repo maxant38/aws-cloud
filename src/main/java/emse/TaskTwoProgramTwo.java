@@ -19,17 +19,21 @@ public class TaskTwoProgramTwo {
             SqsClient sqsClient = SqsClient.builder()
                     .build();
 
-            List<Message> messages = RetrieveMessageSQS.retrieveMessages(sqsClient,queueURl,queueName); // retrieve the messages from the queue in the Amazon SQS
+            List<Message> messages = SQSRetrieveMessage.retrieveMessages(sqsClient,queueURl,queueName); // retrieve the messages from the queue in the Amazon SQS
 
             sleep(5000); // We add some delay in order to do not have any error because of the time it takes to  retrieve the message
 
-            DeleteMessageSQS.deleteMessages(sqsClient, queueURl,messages);
+            SQSDeleteMessage.deleteMessages(sqsClient, queueURl,messages);
 
             sleep(5000); // We add some delay in order to do not have any error because of the time it takes to delete the messages
 
-            DeleteQueueSQS.main(new String[]{queueName});
+            SQSDeleteQueue.main(new String[]{queueName});
+
+            sleep(5000); // We add some delay in order to do not have any error because of the time it takes to delete the queue
 
             sqsClient.close();
+
+
 
         }
 

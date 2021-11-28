@@ -5,7 +5,7 @@ import software.amazon.awssdk.services.sqs.model.*;
 
 import java.util.HashMap;
 
-public class CreateSQS {
+public class SQSCreateQueue {
 
 
     public static String createQueue(SqsClient sqsClient,String queueName ) {

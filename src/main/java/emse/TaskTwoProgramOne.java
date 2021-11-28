@@ -30,11 +30,11 @@ public class TaskTwoProgramOne {
 
             String queueName = "queue" + System.currentTimeMillis();
 
-            CreateSQS.createQueue(sqsClient, queueName);
+            SQSCreateQueue.createQueue(sqsClient, queueName);
 
             sleep(5000); // We add some delay in order to do not have any error because of the time it takes to create a queue
 
-            SendMessageSQS.sendMessages(sqsClient,queueName,nameBucket,nameFile);
+            SQSSendMessage.sendMessages(sqsClient,queueName,nameBucket,nameFile);
 
             sqsClient.close();
 
