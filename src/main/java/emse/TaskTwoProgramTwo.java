@@ -21,7 +21,7 @@ public class TaskTwoProgramTwo {
             String pathForCopyObject = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud\\retrieveObject.csv";
 
 
-            /*
+
 
             SqsClient sqsClient = SqsClient.builder()
                     .build();
@@ -38,7 +38,7 @@ public class TaskTwoProgramTwo {
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the queue
 
-            sqsClient.close(); */
+            sqsClient.close();
 
             S3Client s3 = S3Client.builder()
                     .build();
@@ -54,7 +54,7 @@ public class TaskTwoProgramTwo {
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to calculate and display the min, max, and sum of the values store in the file
 
-            //S3ControllerDeleteObject.deleteBucketObjects(s3, nameBucket, nameFile); // Delete the object
+            S3ControllerDeleteObject.deleteBucketObjects(s3, nameBucket, nameFile); // Delete the object
 
             s3.close();
 
