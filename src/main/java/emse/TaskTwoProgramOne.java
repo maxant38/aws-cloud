@@ -38,6 +38,8 @@ public class TaskTwoProgramOne {
 
             sqsClient.close();
 
+            System.out.println("\n"  + "Task Two Program Two done");
+
         }
 
         catch(InterruptedException ex)

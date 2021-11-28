@@ -28,15 +28,15 @@ public class TaskTwoProgramTwo {
 
             List<Message> messages = SQSRetrieveMessage.retrieveMessages(sqsClient,queueURl,queueName); // retrieve the messages from the queue in the Amazon SQS
 
-            sleep(5000); // We add some delay in order to do not have any error because of the time it takes to  retrieve the message
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to  retrieve the message
 
             SQSDeleteMessage.deleteMessages(sqsClient, queueURl,messages); // Delete the messages
 
-            sleep(5000); // We add some delay in order to do not have any error because of the time it takes to delete the messages
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the messages
 
             SQSDeleteQueue.main(new String[]{queueName}); // Delete the queue
 
-            sleep(5000); // We add some delay in order to do not have any error because of the time it takes to delete the queue
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the queue
 
             sqsClient.close(); */
 
@@ -44,13 +44,21 @@ public class TaskTwoProgramTwo {
                     .build();
 
 
-            sleep(500); // We add some delay in order to do not have any error because of the time it takes to delete the object
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the object
 
             S3ControllerGetObject.main( new String[]{ nameBucket, nameFile, pathForCopyObject} ) ; // We retrieve the file from the Amazon S3 +  We chose in the TaskTwoProgramOne that the KeyName is the nameFile value
 
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to download the object
 
+            S3ControllerAnalyseData.main(new String[]{pathForCopyObject}); // We calculate and display the min, max, and sum of the values store in the file
+
+            sleep(4000); // We add some delay in order to do not have any error because of the time it takes to calculate and display the min, max, and sum of the values store in the file
 
             //S3ControllerDeleteObject.deleteBucketObjects(s3, nameBucket, nameFile); // Delete the object
+
+            s3.close();
+
+            System.out.println("\n" + "Task Two Program Two done");
 
 
         }

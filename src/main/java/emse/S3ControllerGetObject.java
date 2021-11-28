@@ -60,9 +60,7 @@ public class S3ControllerGetObject {
 
 
                 ResponseBytes<GetObjectResponse> objectBytes = s3.getObjectAsBytes(objectRequest);
-                System.out.println(objectBytes);
                 byte[] data = objectBytes.asByteArray();
-                System.out.println(data);
                 // Write the data to a local file
                 File myFile = new File(path);
                 OutputStream os = new FileOutputStream(myFile);
