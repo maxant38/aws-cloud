@@ -16,6 +16,8 @@ public class EC2ControllerCreateInstance {
 
         String amiId = "ami-0142f6ace1c558c7d"; // we find the Image Id in the first screen after you Launch Instance in the AWS Management Console
 
+        System.out.println("\n Creating the instance ");
+
         Ec2Client ec2 = Ec2Client.builder()
                 .build();
 
@@ -27,6 +29,9 @@ public class EC2ControllerCreateInstance {
                 .build();
 
         RunInstancesResponse response = ec2.runInstances(runRequest); //Represents a web response from the AWS EC2 service after instance creation.
+
+        System.out.println("\n Done ");
+
     }
 
 

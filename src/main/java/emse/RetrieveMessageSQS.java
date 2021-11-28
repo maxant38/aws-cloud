@@ -11,6 +11,8 @@ public class RetrieveMessageSQS {
 
     public static List<Message> retrieveMessages(SqsClient sqsClient, String queueUrl, String queueName) {
 
+        System.out.println("\nStart of message retrieval ");
+
 
         try {
             // snippet-start:[sqs.java2.sqs_example.retrieve_messages]
@@ -22,8 +24,12 @@ public class RetrieveMessageSQS {
             List<Message> messages = sqsClient.receiveMessage(receiveMessageRequest).messages();
             System.out.println("\n"+"Message receive from "+ queueName + " :");
             for (Message m : messages) {
-                System.out.println("\n" + m.body());
+                System.out.println("\n" + m.body()); // We print the messages
             }
+            System.out.println("\nDone ");
+            return messages; // We also return the list of messages, because we will this list in order to delete it
+
+
         } catch (SqsException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
             System.exit(1);

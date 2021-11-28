@@ -15,6 +15,9 @@ import java.util.Map;
 public class S3ControllerPutObject {
 
         public static void main(String[] args) {
+
+            System.out.println("\n Start uploading the object to the bucket");
+
             final String USAGE = "\n" +
                     "Usage:\n" +
                     "  <bucketName> <objectKey> <objectPath> \n\n" +
@@ -40,9 +43,11 @@ public class S3ControllerPutObject {
             String result = putS3Object(s3, bucketName, objectKey, objectPath);
             System.out.println("Tag information: "+result);
             s3.close();
+
+            System.out.println("\n Done ");
         }
 
-        // snippet-start:[s3.java2.s3_object_upload.main]
+
         public static String putS3Object(S3Client s3,
                                          String bucketName,
                                          String objectKey,

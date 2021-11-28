@@ -41,6 +41,9 @@ public class S3ControllerCreate {
 
         createBucket(s3, bucketName);
         s3.close();
+
+        System.out.format("Done");
+
     }
 
     public static void createBucket(S3Client s3Client, String bucketName) {

@@ -20,6 +20,8 @@ public class SendMessageSQS {
                     .build();
             sqsClient.sendMessageBatch(sendMessageBatchRequest);
 
+            System.out.println("\n Done ");
+
 
         } catch (SqsException e) {
             System.err.println(e.awsErrorDetails().errorMessage());

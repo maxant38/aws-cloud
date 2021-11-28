@@ -9,6 +9,8 @@ public class EC2ControllerStartInstance {
 
         String instanceId = "i-0310f77745933d55d"; // put the id of the instance you want to start
 
+        System.out.println("\n Starting the instance " + instanceId);
+
         Ec2Client ec2 = Ec2Client.builder()
                 .build();
 
@@ -17,6 +19,8 @@ public class EC2ControllerStartInstance {
                 .build();
 
         ec2.startInstances(request);
+
+        System.out.println("\nDone ");
 
     }
 }
