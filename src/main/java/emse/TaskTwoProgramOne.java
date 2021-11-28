@@ -8,8 +8,8 @@ import static java.lang.Thread.sleep;
 public class TaskTwoProgramOne {
 
 
-
     public static void main(String[] args) {
+
 
         try {
 
@@ -36,8 +36,9 @@ public class TaskTwoProgramOne {
 
             SendMessageSQS.sendMessages(sqsClient,queueName,nameBucket,nameFile);
 
-        }
+            sqsClient.close();
 
+        }
 
         catch(InterruptedException ex)
         {
