@@ -30,6 +30,7 @@ public class SQSRetrieveMessage {
             return messages; // We also return the list of messages, because we will this list in order to delete it
 
 
+
         } catch (SqsException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
             System.exit(1);

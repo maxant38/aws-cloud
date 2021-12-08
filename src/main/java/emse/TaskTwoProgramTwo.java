@@ -14,10 +14,10 @@ public class TaskTwoProgramTwo {
 
         try {
 
-            String queueURl= "https://sqs.us-west-2.amazonaws.com/528939267914/queue1638102894379"; // queue create by TaskTwoProgramOne - Change the string if needed
-            String queueName = "queue1638102894379"; // queue create by TaskTwoProgramOne - Change the string if needed
+            String queueURl= "https://sqs.us-west-2.amazonaws.com/528939267914/queue1638968623940"; // queue create by TaskTwoProgramOne - Change the string if needed
+            String queueName = "queue1638968623940"; // queue create by TaskTwoProgramOne - Change the string if needed
             String nameFile = "values.csv";
-            String nameBucket = "bucket3688480748";
+            String nameBucket = "bucket3611111111";
             String pathForCopyObject = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud\\retrieveObject.csv";
 
 
