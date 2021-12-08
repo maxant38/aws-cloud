@@ -15,12 +15,14 @@ public class TaskTwoProgramOne {
 
             String nameBucket = "bucket3611111111";
             String nameFile = "values.csv";
-            String pathFile = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud";
+            String pathFile = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud\\values.csv";
 
+            // create a bucket in the Amazon S3
             S3ControllerCreate.main(new String[]{nameBucket});
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to create the bucket
 
+            //upload the values.csv file
             S3ControllerPutObject.main(new String[]{nameBucket, nameFile,pathFile });
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to add the object
@@ -28,12 +30,14 @@ public class TaskTwoProgramOne {
             SqsClient sqsClient = SqsClient.builder()
                     .build();
 
-            String queueName = "queue" + System.currentTimeMillis();
+            //create an queue in the Amazon SQS
+            String queueName = "queue1672262692";
 
             SQSCreateQueue.createQueue(sqsClient, queueName);
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to create a queue
 
+            //send a message containing the name of the bucket and file to the queue
             SQSSendMessage.sendMessages(sqsClient,queueName,nameBucket,nameFile);
 
             sqsClient.close();

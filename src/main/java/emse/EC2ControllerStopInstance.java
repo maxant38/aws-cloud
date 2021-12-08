@@ -10,7 +10,7 @@ public class EC2ControllerStopInstance {
 
     public static void main(String[] args) {
 
-        String instanceId = "i-0310f77745933d55d";
+        String instanceId = "i-0310f77745933d55d"; // put the id of the instance we want to stop
 
         System.out.println("\n Stopping the instance " + instanceId );
 

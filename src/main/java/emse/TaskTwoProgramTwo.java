@@ -14,10 +14,10 @@ public class TaskTwoProgramTwo {
 
         try {
 
-            String queueURl= "https://sqs.us-west-2.amazonaws.com/528939267914/queue1638968623940"; // queue create by TaskTwoProgramOne - Change the string if needed
-            String queueName = "queue1638968623940"; // queue create by TaskTwoProgramOne - Change the string if needed
-            String nameFile = "values.csv";
-            String nameBucket = "bucket3611111111";
+            String queueURl= "https://sqs.us-west-2.amazonaws.com/528939267914/queue1672262692"; // queue create by TaskTwoProgramOne - Change the string if needed
+            String queueName =  "queue1672262692"; // queue create by TaskTwoProgramOne - Change the string if needed
+            String nameFile = "";
+            String nameBucket = "";
             String pathForCopyObject = "C:\\Users\\caill\\Desktop\\Cours Mines\\Majeure\\cours 2a info\\Cloud\\retrieveObject.csv";
 
 
@@ -26,15 +26,20 @@ public class TaskTwoProgramTwo {
             SqsClient sqsClient = SqsClient.builder()
                     .build();
 
+            //retrieve the message from the queue in the Amazon SQS
             List<Message> messages = SQSRetrieveMessage.retrieveMessages(sqsClient,queueURl,queueName); // retrieve the messages from the queue in the Amazon SQS
+            nameBucket = messages.get(0).body(); // assign bucket name send by message to variable
+            nameFile = messages.get(1).body(); // assign file name send by message to variable
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to  retrieve the message
 
+            //delete the message in the Amazon SQS
             SQSDeleteMessage.deleteMessages(sqsClient, queueURl,messages); // Delete the messages
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the messages
 
-            SQSDeleteQueue.main(new String[]{queueName}); // Delete the queue
+            //delete the queue in the Amazon SQS
+            SQSDeleteQueue.main(new String[]{queueName});
 
             sleep(4000); // We add some delay in order to do not have any error because of the time it takes to delete the queue
 
