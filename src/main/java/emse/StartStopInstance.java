@@ -17,9 +17,10 @@ public class StartStopInstance {
 
         Ec2Client ec2 = Ec2Client.builder()
                 .build();
-
+        //We get the instance state
         String state=describeEC2Instance( ec2, instanceId);
-
+        
+        //Depending of the state, we turn on/off the instance
         if(state.equals("running"))stopInstance( ec2,  instanceId);
         else startInstance(ec2, instanceId);
         ec2.close();
