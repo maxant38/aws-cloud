@@ -5,6 +5,17 @@ import software.amazon.awssdk.services.sqs.SqsClient;
 
 import static java.lang.Thread.sleep;
 
+/*
+Classes used in this program :  
+[S3COntrollerCreate](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerCreate.java), 
+
+[S3ControllerPutObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerPutObject.java), 
+
+[SQSCreateQueue](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSCreateQueue.java), 
+
+[SQSSendMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSSendMessage.java)
+*/
+
 public class TaskTwoProgramOne {
 
 
