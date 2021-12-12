@@ -8,6 +8,18 @@ import java.util.List;
 
 import static java.lang.Thread.sleep;
 
+/*Classes used in this program : 
+[SQSRetrieveMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSRetrieveMessage.java), 
+
+[SQSDeleteMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSDeleteMessage.java), 
+
+[S3ControllerGetObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerGetObject.java),
+
+[S3ControllerAnalyseData](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerAnalyseData.java), 
+
+[S3ControllerDeleteObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerDeleteObject.java)
+*/
+
 public class TaskTwoProgramTwo {
     public static void main(String[] args) {
 
