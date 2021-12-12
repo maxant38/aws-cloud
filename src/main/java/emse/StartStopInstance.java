@@ -1,19 +1,13 @@
 
 package emse;
 
-// snippet-start:[ec2.java2.describe_instances.import]
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.ec2.model.*;
-// snippet-end:[ec2.java2.describe_instances.import]
 
-/**
- * To run this Java V2 code example, ensure that you have setup your development environment, including your credentials.
- *
- * For information, see this documentation topic:
- *
- * https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/get-started.html
- */
+/*
+The purpose of this class is to describe an instance state, and turn it on/off accordingly
+*/
 public class StartStopInstance {
 
 
@@ -31,7 +25,7 @@ public class StartStopInstance {
         ec2.close();
     }
 
-    // snippet-start:[ec2.java2.describe_instances.main]
+    //returns an instance state (String, "running", or "stop")
     public static String describeEC2Instance( Ec2Client ec2, String instanceId){
 
         boolean done = false;
@@ -71,9 +65,7 @@ public class StartStopInstance {
         ec2.startInstances(request);
         System.out.printf("Successfully started instance %s", instanceId);
     }
-    // snippet-end:[ec2.java2.start_stop_instance.start]
 
-    // snippet-start:[ec2.java2.start_stop_instance.stop]
     public static void stopInstance(Ec2Client ec2, String instanceId) {
 
         StopInstancesRequest request = StopInstancesRequest.builder()
