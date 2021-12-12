@@ -32,7 +32,7 @@ Create a Java program that:
 
 => File: [TaskTwoProgramOne.java](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/TaskTwoProgramOne.java)
 
- Classes used in this program :  [S3COntrollerCreate](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerCreate.java),[S3ControllerPutObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerPutObject.java),[SQSCreateQueue](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSCreateQueue.java),[SQSSendMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSSendMessage.java)
+ Classes used in this program :  [S3COntrollerCreate](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerCreate.java), [S3ControllerPutObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerPutObject.java), [SQSCreateQueue](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSCreateQueue.java), [SQSSendMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSSendMessage.java)
 
 
 
@@ -49,6 +49,8 @@ Create another Java program that:
 - delete the file and bucket from the Amazon S3
 
 => File: [TaskTwoProgramTwo.java](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/TaskTwoProgramTwo.java)
+
+Classes used in this program : [SQSRetrieveMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSRetrieveMessage.java), [SQSDeleteMessage](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/SQSDeleteMessage.java), [S3ControllerGetObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerGetObject.java), [S3ControllerAnalyseData](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerAnalyseData.java), [S3ControllerDeleteObject](https://github.com/maxant38/aws-cloud/blob/main/src/main/java/emse/S3ControllerDeleteObject.java)
 
 ## Built With:
 
